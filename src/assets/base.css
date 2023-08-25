@@ -1,11 +1,12 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* color palette */
 :root {
-
-}
-
-/* semantic color variables for this project */
-:root {
-
+  --background: #fff;
+  --text: #000000;
+  --text-alt: #fff;
+ 
+  --primary: #000000;
+  --secondary: #fff;
+  
 }
 
 
@@ -18,7 +19,7 @@
 }
 
 body {
-  color: black;
-  background: white;
+  color: var(--text);
+  background: var(--background);
   font-family: 'Quattrocento Sans', sans-serif;
 }

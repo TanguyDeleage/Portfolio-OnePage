@@ -34,19 +34,13 @@
 <style scoped>
 
 .hero-container {
-    padding: 4rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
 }
 
 .left-container {
     display: flex;
     flex-direction: column;
-
-    gap: 4rem;
 }
 
 .hero-title{
@@ -64,7 +58,7 @@ h2{
     font-size: 3.5rem;
     font-family: 'Bagnard';
 }
-p{
+.hero-description{
     font-size: 1.5rem;
 }
 
@@ -72,7 +66,7 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .hero-picture {
@@ -82,5 +76,66 @@ p{
     filter: grayscale(1);
     width: 35.375rem;
     height: 37.625rem;
+}
+
+/* ------------- Mobile -------------- */
+@media screen and (max-width: 639px) {
+    .hero-container {
+        padding: 5rem 1rem 4rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .left-container{
+        gap: 2.5rem;
+    }
+
+    .hero-picture {
+        height: 22.375rem;
+        width: 100%;
+    }
+
+    .right-container {
+        width: calc(100vw - 2rem);
+    }
+}
+
+/* ------------- Tablet -------------- */
+@media screen and (min-width: 640px) and (max-width: 979px) {
+    .hero-container {
+        padding: 4rem 2rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .left-container{
+        gap: 2.5rem;
+    }
+
+    .hero-picture {
+        width: 22.375rem;
+        height: 22.5rem;
+    }
+}
+
+/* ------------- Desktop -------------- */
+@media screen and (min-width: 980px) {
+    .hero-container {
+        padding: 4rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .left-container{
+        gap: 4rem;
+    }
+
+    .hero-picture {
+        width: 35.375rem;
+        height: 37.625rem;
+    }
 }
 </style>

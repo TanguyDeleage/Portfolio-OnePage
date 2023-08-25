@@ -3,46 +3,101 @@
     padding: 1.5rem 2rem;
     justify-content: center;
     align-items: center;
-    min-width: 14.375rem;
     text-align: center;
 
     font-family: 'Bagnard';
-    font-size: 1.5rem;
     overflow: hidden;
     position: relative;
+
+    /* Trick to align with the seconday button border  */
+    border: 2px solid var(--primary);
 }
 
 .btn-primary {
-    background-color: black;
-    color: white;
-    /* Trick to align with the seconday button border  */
-    border: 2px solid #000;
+    background-color: var(--primary);
+    color: var(--text-alt);
+
 }
 
 .btn-secondary {
-    background-color: white;
-    color: black;
-    border: 2px solid #000;
-}
-
-.difference-box {
-    position: absolute;
-    right: -16rem;
-    bottom: -10rem;
-    transform: rotate(10deg);
-
-    width: 32rem;
-    height: 16rem;
-    background: #FFF;
-    mix-blend-mode: exclusion;
-
-    transition: ease-out 450ms;
-}
-
-.btn-hover {
-    transform: translateY(20rem);
-    transition: ease-out 450ms;
+    background-color: var(--secondary);
+    color: var(--text);
+    
 }
 
 
 
+
+/* ------------- Mobile -------------- */
+@media screen and (max-width: 639px) {
+    .difference-box {
+        display: none;
+    }
+    .btn {
+        min-width: 12.5rem
+    }
+
+    .btn p {
+        font-size: 1rem;
+    }
+}
+
+/* ------------- Tablet -------------- */
+@media screen and (min-width: 640px) and (max-width: 979px) {
+    .btn {
+        min-width: 14.375rem;
+    }
+
+    .btn p {
+        font-size: 1.5rem;
+    }
+
+    .difference-box {
+        position: absolute;
+        right: -16rem;
+        bottom: -10rem;
+        transform: rotate(10deg);
+    
+        width: 32rem;
+        height: 16rem;
+        background: var(--secondary);
+        mix-blend-mode: exclusion;
+    
+        transition: ease-out 450ms 0s;
+    }
+    
+    .btn-hover {
+        transform: translateY(10rem);
+        transition: ease-out 450ms 0s;
+    }
+}
+
+/* ------------- Desktop -------------- */
+@media screen and (min-width: 980px) {
+    .btn {
+        min-width: 14.375rem;
+    }
+
+    .btn p {
+        font-size: 1.5rem;
+    }
+
+    .difference-box {
+        position: absolute;
+        right: -16rem;
+        bottom: -10rem;
+        transform: rotate(10deg);
+    
+        width: 32rem;
+        height: 16rem;
+        background: var(--secondary);
+        mix-blend-mode: exclusion;
+    
+        transition: ease-out 450ms 0s;
+    }
+    
+    .btn-hover {
+        transform: translateY(10rem);
+        transition: ease-out 450ms 0s;
+    }
+}

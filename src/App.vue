@@ -1,10 +1,12 @@
 <script setup>
   import Hero from './components/Hero.vue'
+  import Work from './components/Work.vue'
 </script>
 
 <template>
   <main>
     <Hero />
+    <Work />
   </main>
 </template>
 
