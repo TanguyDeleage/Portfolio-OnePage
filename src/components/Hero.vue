@@ -73,6 +73,7 @@ h2{
     background: url("../assets/images/hero-picture.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     filter: grayscale(1);
     width: 35.375rem;
     height: 37.625rem;

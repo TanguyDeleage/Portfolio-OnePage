@@ -1,9 +1,15 @@
 <script setup>
   import Hero from './components/Hero.vue'
   import Work from './components/Work.vue'
+  import Header from './components/Header.vue'
 </script>
 
 <template>
+
+  <head>
+    <Header />
+  </head>
+
   <main>
     <Hero />
     <Work />
