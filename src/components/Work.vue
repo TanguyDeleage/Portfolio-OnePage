@@ -1,6 +1,6 @@
 <template>
     <section class="work-container">
-        <h1 class="section-title">/ WORK</h1>
+        <h2 class="section-title">/ WORK</h2>
         <div class="section-content" v-for="project in projects" :key="project">
             <div class="project">
                 <div class="left-container">
@@ -9,7 +9,7 @@
                 </div>
                 <div class="right-container">
                     <div class="project-title">
-                        <h2>{{ project.title }}</h2>
+                        <h3>{{ project.title }}</h3>
                         <p>{{ project.description }}</p>
                     </div>
                     <div class="btn btn-primary">
@@ -104,10 +104,6 @@
         padding: 3rem 1rem;
         gap: 8rem;
     }
-    .section-title{
-        font-size: 2rem;
-        font-family: 'Bagnard';
-    }
 
     .project{
         gap: 2.5rem;
@@ -136,7 +132,7 @@
         text-align: center;
     }
 
-    .project-title h2{
+    .project-title h3{
         font-family: 'Bagnard';
         font-size: 2rem;
     }
@@ -157,12 +153,6 @@
 
     .section-content:nth-child(odd) .project{
         flex-direction: row-reverse;
-    }
-
-    .section-title{
-        padding-left: 2rem;
-        font-size: 2rem;
-        font-family: 'Bagnard';
     }
 
     .project{
@@ -187,7 +177,7 @@
         left: -3.75rem;
     }
 
-    .project-title h2{
+    .project-title h3{
         font-family: 'Bagnard';
         font-size: 2.5rem;
     }
@@ -208,12 +198,6 @@
 
     .section-content:nth-child(odd) .project{
         flex-direction: row-reverse;
-    }
-
-    .section-title{
-        padding-left: 4rem;
-        font-size: 3rem;
-        font-family: 'Bagnard';
     }
 
     .project{
@@ -239,7 +223,7 @@
         left: -19.401rem;
     }
 
-    .project-title h2{
+    .project-title h3{
         font-family: 'Bagnard';
         font-size: 5rem;
     }

@@ -1,7 +1,8 @@
 <script setup>
+  import Header from './components/Header.vue'
   import Hero from './components/Hero.vue'
   import Work from './components/Work.vue'
-  import Header from './components/Header.vue'
+  import About from './components/About.vue'
 </script>
 
 <template>
@@ -13,20 +14,51 @@
   <main>
     <Hero />
     <Work />
+    <About />
   </main>
 </template>
 
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-body {
-  background-color: white;
-}
 
 @font-face {
   font-family: 'Bagnard';
   src: url(../src/assets/fonts/Bagnard.otf);
 }
+
+body {
+  background-color: white;
+}
+
+.section-title{
+  font-family: 'Bagnard';
+  width: 100%;
+}
+
+
+/* ------------- Mobile -------------- */
+  @media screen and (max-width: 639px) {
+    .section-title{
+        font-size: 2rem;
+    }
+  }
+
+/* ------------- Tablet -------------- */
+@media screen and (min-width: 640px) and (max-width: 979px) {
+  .section-title{
+      padding-left: 2rem;
+      font-size: 2rem;
+  }
+}
+
+/* ------------- Desktop -------------- */
+@media screen and (min-width: 980px) {
+  .section-title{
+      padding-left: 4rem;
+      font-size: 3rem;
+  }
+}
+
 </style>
