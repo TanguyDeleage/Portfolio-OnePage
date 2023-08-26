@@ -83,7 +83,7 @@ h2{
 @media screen and (max-width: 639px) {
     .hero-container {
         padding: 5rem 1rem 4rem 1rem;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: flex-start;
         gap: 1rem;
     }

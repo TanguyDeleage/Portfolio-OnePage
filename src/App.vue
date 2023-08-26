@@ -6,9 +6,9 @@
 
 <template>
 
-  <head>
+  <header>
     <Header />
-  </head>
+  </header>
 
   <main>
     <Hero />
