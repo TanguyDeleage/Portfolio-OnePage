@@ -3,6 +3,8 @@
   import Hero from './components/Hero.vue'
   import Work from './components/Work.vue'
   import About from './components/About.vue'
+  import Contact from './components/Contact.vue'
+  import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -15,7 +17,12 @@
     <Hero />
     <Work />
     <About />
+    <Contact />
   </main>
+
+  <Footer>
+    <Footer />
+  </Footer>
 </template>
 
 
