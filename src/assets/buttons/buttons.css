@@ -1,6 +1,6 @@
 .btn {
     display:inline ;
-    padding: 1.5rem 2rem;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -8,7 +8,6 @@
 
     font-family: 'Bagnard';
     overflow: hidden;
-    position: relative;
 
     /* Trick to align with the seconday button border  */
     border: 2px solid var(--primary);
@@ -17,12 +16,14 @@
 .btn-primary {
     background-color: var(--primary);
     color: var(--text-alt);
+    padding: 1.5rem 2rem;
 
 }
 
 .btn-secondary {
     background-color: var(--secondary);
     color: var(--text);
+    padding: 1.5rem 2rem;
     
 }
 
@@ -31,10 +32,8 @@
 
 /* ------------- Mobile -------------- */
 @media screen and (max-width: 639px) {
-    .difference-box {
-        display: none;
-    }
-    .btn {
+
+    .btn-primary, .btn-secondary {
         min-width: 12.5rem
     }
 
@@ -45,22 +44,18 @@
 
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
-    .btn {
+    .btn-primary, .btn-secondary {
         min-width: 12.5rem;
     }
 
     .btn p {
         font-size: 1rem;
     }
-
-    .difference-box {
-        display: none;
-    }
 }
 
 /* ------------- Desktop -------------- */
 @media screen and (min-width: 980px) {
-    .btn {
+    .btn-primary, .btn-secondary {
         min-width: 14.375rem;
     }
 
@@ -68,22 +63,20 @@
         font-size: 1.5rem;
     }
 
-    .difference-box {
+    .btn::after {
+        content: '';
         position: absolute;
-        right: -16rem;
-        bottom: -10rem;
-        transform: rotate(10deg);
-    
-        width: 32rem;
-        height: 16rem;
-        background: var(--secondary);
+        bottom: -26rem;
+        right: -9rem;
+        width: 52rem;
+        height: 24rem;
+        background-color: var(--secondary);
         mix-blend-mode: exclusion;
-    
-        transition: ease-out 450ms 0s;
+        transition: 0.5s ease-out;
+        transform: rotate(10deg);
     }
-    
-    .btn-hover {
-        transform: translateY(10rem);
-        transition: ease-out 450ms 0s;
+
+    .btn:hover::after {
+        bottom: -15rem;
     }
 }

@@ -3,9 +3,9 @@
         <h2 class="section-title">/ WORK</h2>
         <div class="section-content" >
             <div class="project" v-for="project in projects" :key="project">
-                <div class="left-container">
+                <div class="left-container" :class="{'container-desktop': project.device === 'desktop left'}">
                     <!-- Il faudra bind une class pour savoir si image desktop ou mobile -->
-                    <div class="project-image" :class="{ 'desktop-left': project.device === 'desktop left' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
+                    <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'desktop left', 'hide-right':project.device === 'mobile' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
                 </div>
                 <div class="right-container">
                     <div class="project-title">
@@ -14,7 +14,6 @@
                     </div>
                     <a :href="project.url" class="btn btn-primary" target="_blank">
                         <p>Discover</p>
-                        <div class="difference-box btn-hover"></div>
                     </a>
                 </div>
             </div>
@@ -162,9 +161,7 @@
     }
 
     .project{
-        /* gap: 2.8125rem; */
         flex-direction: row;
-        /* padding: 0rem 3rem 0rem 0rem; */
     }
 
     .left-container {
@@ -218,12 +215,15 @@
     }
 
     .left-container {
-        min-width: 37.5rem;
+        width: 50%;
+    }
+
+    .container-desktop {
         max-width: 62.5rem;
     }
 
     .right-container{
-        width: 33.25rem;
+        width: 50%;
         align-items: flex-start;
         gap: 4rem;
     }
@@ -234,7 +234,7 @@
     }
 
     .desktop-left {
-        left: -19.401rem;
+        left: -20%;
         position: relative;
     }
 
@@ -246,6 +246,16 @@
     .project-title p {
         font-family: 'Quattrocento Sans';
         font-size: 1.5rem;
+    }
+
+    .hide-left {
+        transform: translateX(-20%) scale(0.8);
+        filter: grayscale(0.5);
+    }
+
+    .hide-right {
+        transform: translateX(20%) scale(0.8);
+        filter: grayscale(0.5);
     }
 
 }

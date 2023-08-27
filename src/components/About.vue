@@ -1,8 +1,6 @@
 <template>
     <section class="about-container">
-        <div class="section-title">
-            <h2>/ About</h2>
-        </div>
+        <h2 class="section-title">/ ABOUT</h2>
         <div class="presentation">
             <div class="text">
                 <div class="header">

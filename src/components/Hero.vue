@@ -10,11 +10,9 @@
             <div class="hero-cta">
                 <div class="btn btn-primary">
                     <p>View Portfolio</p>
-                    <div class="difference-box btn-hover"></div>
                 </div>
                 <div class="btn btn-secondary">
                     <p>Contact</p>
-                    <div class="difference-box btn-hover"></div>
                 </div>
             </div>
         </div>

@@ -3,13 +3,12 @@
         <div class="socials">
             <h4 class="title">Follow Me</h4>
             <div class="social-links">
-                <a v-for="link in links" :key="link" class="social-link" :href="link.url">
+                <a v-for="link in links" :key="link" class="social-link btn" :href="link.url">
                     <img :src="link.image" :alt="link.title">
-                    <div></div>
                 </a>
             </div>
         </div>
-        <img src="" alt="">
+        <img src="public/logo-footer.svg" alt="Tanguy DELEAGE logo">
         <div class="text">
             <p class="mail">contact@tanguydeleage.com</p>
             <div class="copyright">
@@ -30,17 +29,17 @@
                     {
                         title: "Linkedin",
                         url: "https://www.linkedin.com/in/tanguy-deleage/",
-                        // image: ,
+                        image: "public/icon-linkedin.svg",
                     },
                     {
                         title: "Behance",
                         url: "https://www.behance.net/tanguy-delage",
-                        // image: ,
+                        image: "public/icon-behance.svg",
                     },
                     {
                         title: "Github",
                         url: "https://github.com/TanguyDeleage",
-                        // image: ,
+                        image: "public/icon-github.svg",
                     }
 
                 ]
@@ -79,6 +78,7 @@
         gap: 1rem;
         border: 2px solid var(--primary);
         background: var(--secondary);
+        text-decoration: none;
     }
 
     .text {
@@ -193,6 +193,7 @@
     .social-links {
         padding-right: 1rem;
     }
+
     .mail {
         font-size: 1.5rem;
     }

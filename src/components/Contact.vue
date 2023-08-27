@@ -1,13 +1,12 @@
 <template>
     <section class="contact-container">
-        <h2 class="section-title">/ Contact</h2>
+        <h2 class="section-title">/ CONTACT</h2>
         <div class="main">
             <h3 class="title">Magic Starts Here</h3>
             <div class="content">
                 <h4 class="subtitle">Have A Project In Mind ?</h4>
                 <div class="btn btn-primary">
                     <p>contact@tanguydeleage.com</p>
-                    <div class="difference-box btn-hover"></div>
                 </div>
             </div>
             <div class="divider"></div>
@@ -119,12 +118,13 @@
 /* ------------- Desktop -------------- */
 @media screen and (min-width: 980px) {
     .contact-container {
-        padding: 4rem 4rem 2rem 4rem;
+        padding: 4rem 4rem 2rem 0rem;
         gap: 8rem;
     }
 
     .main {
         gap: 3rem;
+        padding-left: 4rem;
     }
 
     .title {
