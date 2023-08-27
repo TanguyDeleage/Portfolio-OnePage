@@ -2,11 +2,11 @@
     <div class="footer">
         <div class="socials">
             <h4 class="title">Follow Me</h4>
-            <div class="social-links" v-for="link in links" :key="link">
-                <div class="social-link">
-                    <img src="" alt="">
+            <div class="social-links">
+                <a v-for="link in links" :key="link" class="social-link" :href="link.url">
+                    <img :src="link.image" :alt="link.title">
                     <div></div>
-                </div>
+                </a>
             </div>
         </div>
         <img src="" alt="">
@@ -24,6 +24,28 @@
 <script>
     export default {
         name: 'Footer',
+        data() {
+            return {
+                links: [
+                    {
+                        title: "Linkedin",
+                        url: "https://www.linkedin.com/in/tanguy-deleage/",
+                        // image: ,
+                    },
+                    {
+                        title: "Behance",
+                        url: "https://www.behance.net/tanguy-delage",
+                        // image: ,
+                    },
+                    {
+                        title: "Github",
+                        url: "https://github.com/TanguyDeleage",
+                        // image: ,
+                    }
+
+                ]
+            }
+        }
     }
 </script>
 
@@ -43,6 +65,7 @@
     .social-links {
         display: flex;
         align-items: flex-start;
+        gap: 0.5rem;
     }
 
     .social-link {
@@ -102,6 +125,8 @@
     }
     .title{
         font-size: 1rem;
+        width: 100%;
+        text-align: center;
     }
     .mail {
         font-size: 1rem;

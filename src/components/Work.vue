@@ -1,21 +1,21 @@
 <template>
     <section class="work-container">
         <h2 class="section-title">/ WORK</h2>
-        <div class="section-content" v-for="project in projects" :key="project">
-            <div class="project">
+        <div class="section-content" >
+            <div class="project" v-for="project in projects" :key="project">
                 <div class="left-container">
                     <!-- Il faudra bind une class pour savoir si image desktop ou mobile -->
-                    <div class="project-image-desktop" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
+                    <div class="project-image" :class="{ 'desktop-left': project.device === 'desktop left' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
                 </div>
                 <div class="right-container">
                     <div class="project-title">
                         <h3>{{ project.title }}</h3>
                         <p>{{ project.description }}</p>
                     </div>
-                    <div class="btn btn-primary">
-                    <p>Discover</p>
-                    <div class="difference-box btn-hover"></div>
-                </div>
+                    <a :href="project.url" class="btn btn-primary" target="_blank">
+                        <p>Discover</p>
+                        <div class="difference-box btn-hover"></div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -24,7 +24,6 @@
 
 
 <script>
-// import projectImage from "@/assets/images/project-canal.png";
 
     export default {
         name: 'Work',
@@ -36,7 +35,8 @@
                         description: "Provide the download and web consumption of offline content for the users of the web platform",
                         image: "public/project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
-                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon"
+                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon",
+                        device: "desktop left"
 
                     },
                     {
@@ -44,7 +44,8 @@
                         description: "10 days to help foreign students live a deeper exchange experience",
                         image: "public/project-matematch.png",
                         alt: "Home page mockup of the Matematch app",
-                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon"
+                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon",
+                        device: "mobile"
 
                     },
                     {
@@ -52,7 +53,8 @@
                         description: "48h to help families live an easier mourning",
                         image: "public/project-legid.png",
                         alt: "Mockup of the LegID landing page",
-                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon"
+                        url: "https://www.behance.net/gallery/176612077/LegID-Start-up-weekend-project",
+                        device: "desktop left"
 
                     }
                 ]
@@ -102,6 +104,10 @@
 @media screen and (max-width: 639px) {
     .work-container {
         padding: 3rem 1rem;
+        gap: 4rem;
+    }
+
+    .section-content {
         gap: 8rem;
     }
 
@@ -122,7 +128,7 @@
         align-self: stretch;
     }
 
-    .project-image-desktop {
+    .project-image {
         height: 15.25rem;
         width: 100%;
     }
@@ -147,18 +153,18 @@
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
     .work-container {
-        padding: 2rem 0rem;
-        gap: 2rem;
+        padding: 2rem 3rem;
+        gap: 4rem;
     }
 
-    .section-content:nth-child(odd) .project{
+    .project:nth-child(even) {
         flex-direction: row-reverse;
     }
 
     .project{
-        gap: 2.8125rem;
+        /* gap: 2.8125rem; */
         flex-direction: row;
-        padding: 0rem 3rem 0rem 0rem;
+        /* padding: 0rem 3rem 0rem 0rem; */
     }
 
     .left-container {
@@ -171,10 +177,15 @@
         gap: 4rem;
     }
 
-    .project-image-desktop {
+    .project-image {
         width: 27.125rem;
-        height: 18.3125rem;
+        /* height: 18.3125rem; */
+        height: 33rem;
+    }
+
+    .desktop-left {
         left: -3.75rem;
+        position: relative;
     }
 
     .project-title h3{
@@ -196,7 +207,7 @@
         gap: 8rem;
     }
 
-    .section-content:nth-child(odd) .project{
+    .project:nth-child(even){
         flex-direction: row-reverse;
     }
 
@@ -217,10 +228,14 @@
         gap: 4rem;
     }
 
-    .project-image-desktop {
+    .project-image {
         width: 49.75rem;
         height: 40.125rem;
+    }
+
+    .desktop-left {
         left: -19.401rem;
+        position: relative;
     }
 
     .project-title h3{

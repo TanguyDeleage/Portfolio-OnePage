@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-decoration: none;
 
     font-family: 'Bagnard';
     overflow: hidden;
@@ -45,30 +46,15 @@
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
     .btn {
-        min-width: 14.375rem;
+        min-width: 12.5rem;
     }
 
     .btn p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .difference-box {
-        position: absolute;
-        right: -16rem;
-        bottom: -10rem;
-        transform: rotate(10deg);
-    
-        width: 32rem;
-        height: 16rem;
-        background: var(--secondary);
-        mix-blend-mode: exclusion;
-    
-        transition: ease-out 450ms 0s;
-    }
-    
-    .btn-hover {
-        transform: translateY(10rem);
-        transition: ease-out 450ms 0s;
+        display: none;
     }
 }
 

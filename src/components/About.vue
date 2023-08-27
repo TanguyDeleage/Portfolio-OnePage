@@ -18,7 +18,7 @@
             </div>
             <div class="image">
                 <h4 class="subtitle">My Professional Path</h4>
-                <img src="" alt="">
+                <img :src="getImageSrc" alt="My professional path">
             </div>
         </div>
         <div class="hobbies">
@@ -50,7 +50,34 @@
 <script>
     export default {
         name: 'About',
-    }
+        data() {
+            return {
+                imagePaths: {
+                    small: 'public/about-path-sm.jpg',
+                    medium: 'public/about-path-md.jpg',
+                    large: 'public/about-path-lg.jpg',
+                }
+            };
+        },
+        computed: {
+            getImageSrc() {
+                const windowWidth = window.innerWidth;
+
+                console.log('Window Width:', windowWidth);
+
+                if (windowWidth < 639) {
+                    console.log('Using Small Image');
+                    return this.imagePaths.small;
+                } else if (windowWidth < 980) {
+                    console.log('Using Medium Image');
+                    return this.imagePaths.medium;
+                } else {
+                    console.log('Using Large Image');
+                    return this.imagePaths.large;
+                }
+            }
+        }
+    };
 </script>
 
 
@@ -100,6 +127,19 @@
     .intro-paragraph p {
         color: var(--text);
         font-family: 'Quattrocento Sans';
+    }
+
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        margin: 0 auto;
+    }
+
+    .image h4 {
+        width: 100%;
+        text-align: center;
     }
 
     .testimonials {
@@ -153,7 +193,7 @@
 @media screen and (max-width: 639px) {
 
     .about-container {
-        padding: 3rem 0rem;
+        padding: 3rem 1rem;
         gap: 4rem;
     }
 
@@ -183,6 +223,16 @@
 
     .intro-paragraph p {
         font-size: 1rem;
+    }
+
+    .image {
+        padding: 4rem 1rem;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    .image img {
+        width: 100%;
     }
 
     .testimonials {
@@ -255,13 +305,17 @@
         font-size: 1.5rem;
     }
 
+    .image {
+        padding: 4rem 2rem;
+        gap: 4rem;
+    }
+
     .hobbies {
         width: 36rem;
     }
 
     .testimonials {
         gap: 4rem;
-        width: 57.4375rem;
     }
 
     .lower-part{
@@ -330,6 +384,16 @@
 
     .intro-paragraph p {
         font-size: 1.5rem;
+    }
+
+    .image {
+        padding: 4rem;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    .image img {
+        width: 100%
     }
 
     .testimonials {
