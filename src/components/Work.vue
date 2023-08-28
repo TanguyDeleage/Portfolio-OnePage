@@ -4,7 +4,6 @@
         <div class="section-content" >
             <div class="project" v-for="project in projects" :key="project">
                 <div class="left-container" :class="{'container-desktop': project.device === 'desktop left'}">
-                    <!-- Il faudra bind une class pour savoir si image desktop ou mobile -->
                     <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'desktop left', 'hide-right':project.device === 'mobile' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
                 </div>
                 <div class="right-container">

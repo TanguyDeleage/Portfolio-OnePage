@@ -39,6 +39,13 @@ body {
   background-color: white;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: linear-gradient(180deg, #FFF 0%, #FFF 25.52%, rgba(255, 255, 255, 0.00) 100%);
+}
+
 .section-title{
   font-family: 'Bagnard';
   width: 100%;
