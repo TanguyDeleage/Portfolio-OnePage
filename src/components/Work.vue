@@ -4,7 +4,7 @@
         <div class="section-content" >
             <div class="project" v-for="project in projects" :key="project">
                 <div class="left-container" :class="{'container-desktop': project.device === 'desktop left'}">
-                    <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'desktop left', 'hide-right':project.device === 'mobile' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
+                    <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'desktop left', 'mobile hide-right':project.device === 'mobile' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
                 </div>
                 <div class="right-container">
                     <div class="project-title">
@@ -56,6 +56,38 @@
 
                     }
                 ]
+            }
+        },
+
+        mounted() {
+            window.addEventListener('scroll', this.displayProject);
+        },
+
+        methods: {
+            displayProject() {
+                const desktopProjects = document.querySelectorAll('.project-image.desktop-left');
+                desktopProjects.forEach(project => {
+                    const rect = project.getBoundingClientRect();
+                    const distanceToTop = rect.top;
+
+                    if (distanceToTop <= 350 && distanceToTop >= -60) {
+                        project.classList.remove('hide-left');
+                    } else {
+                        project.classList.add('hide-left');
+                    }
+                });
+
+                const mobileProjects = document.querySelectorAll('.project-image.mobile');
+                mobileProjects.forEach(project => {
+                    const rect = project.getBoundingClientRect();
+                    const distanceToTop = rect.top;
+
+                    if (distanceToTop <= 350 && distanceToTop >= -60) {
+                        project.classList.remove('hide-right');
+                    } else {
+                        project.classList.add('hide-right');
+                    }
+                });
             }
         }
     }
@@ -230,6 +262,7 @@
     .project-image {
         width: 49.75rem;
         height: 40.125rem;
+        transition: 0.5s ease-out;
     }
 
     .desktop-left {
