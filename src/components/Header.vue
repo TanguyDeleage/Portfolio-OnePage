@@ -5,22 +5,22 @@
                 <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" class="icon-animation" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
             </svg>
        </div>
-       <nav class="nav-links">
+       <nav  @click="openMenu()" class="nav-links">
             <div class="nav-link">
-                <p class="nav-title">Home</p>
+                <p class="nav-title slide-left">Home</p>
             </div>
             <div class="nav-link">
-                <p class="nav-title">Work</p>
+                <p class="nav-title slide-left">Work</p>
             </div>
             <div class="nav-link">
-                <p class="nav-title">About</p>
+                <p class="nav-title slide-left">About</p>
                 <div></div>
             </div>
             <div class="nav-link">
-                <p class="nav-title">Contact</p>
+                <p class="nav-title slide-left">Contact</p>
             </div>
        </nav>
-       <div class="burger">
+       <div @click="openMenu()" class="burger">
             <div class="line">
                 <div class="line1"></div>
             </div>
@@ -65,13 +65,31 @@
                 this.paths.forEach(path => {
                     path.class = isHovered ? `icon-${path.name}` : '';
                 });
-            }
+            },
+            openMenu() {
+                const burger = document.querySelector('.burger');
+                const nav = document.querySelector('.nav-links');
+                const body = document.querySelector('body');
+                const navLinks = document.querySelectorAll('.nav-title')
+
+            // Ouvre le dropdown menu et le ferme en cliquant sur l'icône
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+                // Empêche de scroller sur le reste de la page quand la navbar est ouverte
+                body.classList.toggle('no-scroll');
+                // Animation de chaque lien 1 par 1
+                navLinks.forEach((link, index) => { 
+                    setTimeout(() => {
+                        link.classList.toggle('slide-left')
+                    }, index*100);
+                });
+            },
         }
     }    
 </script>
 
 
-<style scoped>
+<style>
 
 
    
@@ -109,6 +127,8 @@
         justify-content: center;
         align-items: flex-end;
         gap: 0.75rem;
+        z-index: 9999;
+        overflow: hidden;
     }
 
     .burger .line {
@@ -122,6 +142,7 @@
         height: 0.25rem;
         position: absolute;
         background: #000;
+        transition: 0.5s ease-out;
     }
     .line2 {
         width: 2.5rem;
@@ -129,6 +150,7 @@
         position: absolute;
         left: -0.25rem;
         background: #000;
+        transition: 0.5s ease-out;
     }
     .line3 {
         width: 2.5rem;
@@ -136,6 +158,56 @@
         position: absolute;
         left: -0.5rem;
         background: #000;
+        transition: 0.5s ease-out;
+    }
+
+    /* ==== Animation menu burger ===== */
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-10px, 6px);
+    }
+
+    .toggle .line2 {
+        transform: translateX(10rem);
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5.5px, -11px);
+    }
+    .nav-links {
+        display: flex;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        background-color: var(--secondary);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 9998;
+        padding: 10rem 2rem;
+        transform: translateX(100%);
+        transition: all 0.7s ease-in;
+        gap: 7rem;
+    }
+
+    .nav-active {
+        transform: translateX(0%) !important;
+        transition: all 0.3s ease-in;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .nav-title {
+        transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
+    }
+
+    .slide-left {
+        opacity: 0%;
+        transform: translateX(2rem);
     }
 }
 
@@ -160,6 +232,8 @@
         justify-content: center;
         align-items: flex-end;
         gap: 0.75rem;
+        z-index: 9999;
+        overflow: hidden;
     }
 
     .burger .line {
@@ -173,6 +247,7 @@
         height: 0.25rem;
         position: absolute;
         background: #000;
+        transition: 0.5s ease-out;
     }
     .line2 {
         width: 2.5rem;
@@ -180,6 +255,7 @@
         position: absolute;
         left: -0.25rem;
         background: #000;
+        transition: 0.5s ease-out;
     }
     .line3 {
         width: 2.5rem;
@@ -187,6 +263,56 @@
         position: absolute;
         left: -0.5rem;
         background: #000;
+        transition: 0.5s ease-out;
+    }
+
+    /* ==== Animation menu burger ===== */
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-10px, 6px);
+    }
+
+    .toggle .line2 {
+        transform: translateX(10rem);
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5.5px, -11px);
+    }
+    .nav-links {
+        display: flex;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        background-color: var(--secondary);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 9998;
+        padding: 10rem 2rem;
+        transform: translateX(100%);
+        transition: all 0.7s ease-in;
+        gap: 7rem;
+    }
+
+    .nav-active {
+        transform: translateX(0%) !important;
+        transition: all 0.3s ease-in;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .nav-title {
+        transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s;
+    }
+
+    .slide-left {
+        opacity: 0%;
+        transform: translateX(2rem);
     }
 }
 
@@ -247,15 +373,15 @@
     }
     
     .icon-left {
-        transform: translateY(0.7rem) translateX(-0.2rem) rotate(90deg) ;
+        transform: translateY(0.9rem) translateX(-0.5rem) rotate(90deg) ;
     }
 
     .icon-right {
-        transform: translateY(0.7rem) translateX(0.2rem) rotate(-90deg) ;
+        transform: translateY(0.9rem) translateX(0.4rem) rotate(-90deg) ;
     }
 
     .icon-top {
-        transform: translateY(0rem) ;
+        transform: translateY(0.2rem) ;
     }
 
 }
