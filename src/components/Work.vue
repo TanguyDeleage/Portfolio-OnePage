@@ -70,7 +70,7 @@
                     const rect = project.getBoundingClientRect();
                     const distanceToTop = rect.top;
 
-                    if (distanceToTop <= 350 && distanceToTop >= -60) {
+                    if (distanceToTop <= 370 && distanceToTop >= -60) {
                         project.classList.remove('hide-left');
                     } else {
                         project.classList.add('hide-left');
@@ -82,7 +82,7 @@
                     const rect = project.getBoundingClientRect();
                     const distanceToTop = rect.top;
 
-                    if (distanceToTop <= 350 && distanceToTop >= -60) {
+                    if (distanceToTop <= 370 && distanceToTop >= -60) {
                         project.classList.remove('hide-right');
                     } else {
                         project.classList.add('hide-right');

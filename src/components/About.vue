@@ -2,7 +2,7 @@
     <section class="about-container">
         <h2 class="section-title">/ ABOUT</h2>
         <div class="presentation">
-            <div class="text">
+            <div class="text slide-in">
                 <div class="header">
                     <h3 class="title">Bridging Design And Development</h3>
                     <h4 class="subtitle">With A Lot Of Passion</h4>
@@ -67,6 +67,20 @@
                     return this.imagePaths.medium;
                 } else {
                     return this.imagePaths.large;
+                }
+            }
+        },
+        mounted() {
+            window.addEventListener('scroll', this.slideIn);
+        },
+        methods: {
+            slideIn() {
+                const text = document.querySelector('.text')
+                const rect = text.getBoundingClientRect();
+                const distanceToTop = rect.top;
+                
+                if (distanceToTop < 760) {
+                    text.classList.remove('slide-in')
                 }
             }
         }
@@ -357,6 +371,7 @@
     .text {
         gap: 4rem;
         width: 52.25rem;
+        transition: 0.5s;
     }
 
     .header {
@@ -421,6 +436,11 @@
     .reference {
         font-size: 1.5rem;
         font-style: italic;
+    }
+
+    .slide-in {
+        opacity: 0;
+        transform: translateX(-2rem);
     }
 
 }
