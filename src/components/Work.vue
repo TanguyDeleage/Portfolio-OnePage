@@ -17,6 +17,11 @@
                 </div>
             </div>
         </div>
+        <div class="lines-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </section>
 </template>
 
@@ -70,7 +75,7 @@
                     const rect = project.getBoundingClientRect();
                     const distanceToTop = rect.top;
 
-                    if (distanceToTop <= 370 && distanceToTop >= -60) {
+                    if (distanceToTop <= 480 && distanceToTop >= -60) {
                         project.classList.remove('hide-left');
                     } else {
                         project.classList.add('hide-left');
@@ -82,7 +87,7 @@
                     const rect = project.getBoundingClientRect();
                     const distanceToTop = rect.top;
 
-                    if (distanceToTop <= 370 && distanceToTop >= -60) {
+                    if (distanceToTop <= 480 && distanceToTop >= -60) {
                         project.classList.remove('hide-right');
                     } else {
                         project.classList.add('hide-right');
@@ -99,6 +104,7 @@
 .work-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .project {
@@ -128,7 +134,28 @@
     align-items: flex-end;
     gap: 8rem;
     align-self: stretch;
+    z-index: 1;
 }
+
+.lines-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        background:
+        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1)),
+        lightgray;
+        z-index: 0;
+    }
+
+    .line1, .line2, .line3 {
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.10) 50%, rgba(0, 0, 0, 0.05) 100%);
+        z-index: 2;
+    }
 
 /* ------------- Mobile -------------- */
 @media screen and (max-width: 639px) {
@@ -262,7 +289,7 @@
     .project-image {
         width: 49.75rem;
         height: 40.125rem;
-        transition: 0.5s ease-out;
+        transition: 0.7s ease-out;
     }
 
     .desktop-left {

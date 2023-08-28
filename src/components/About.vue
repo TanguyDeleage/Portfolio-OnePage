@@ -79,7 +79,7 @@
                 const rect = text.getBoundingClientRect();
                 const distanceToTop = rect.top;
                 
-                if (distanceToTop < 760) {
+                if (distanceToTop < 660) {
                     text.classList.remove('slide-in')
                 }
             }

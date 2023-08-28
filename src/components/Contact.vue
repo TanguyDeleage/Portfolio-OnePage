@@ -9,7 +9,7 @@
                     <p>contact@tanguydeleage.com</p>
                 </div>
             </div>
-            <div class="divider"></div>
+            <!-- <div class="divider"></div> -->
         </div>
     </section>
 </template>

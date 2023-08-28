@@ -1,19 +1,26 @@
 <template>
-    <div class="footer">
-        <div class="socials">
-            <h4 class="title">Follow Me</h4>
-            <div class="social-links">
-                <a v-for="link in links" :key="link" class="social-link btn" :href="link.url">
-                    <img :src="link.image" :alt="link.title">
-                </a>
+    <div class="footer-container">
+        <div class="divider"></div>
+        <div class="footer">
+            <div class="socials">
+                <h4 class="title">Follow Me</h4>
+                <div class="social-links">
+                    <a v-for="link in links" :key="link" class="social-link btn" :href="link.url">
+                        <img :src="link.image" :alt="link.title">
+                    </a>
+                </div>
             </div>
+            <div class="brand"  @click="goUp()">
+                <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="46" viewBox="0 0 40 46" fill="none">
+                    <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
+                </svg>
         </div>
-        <img src="public/logo-footer.svg" alt="Tanguy DELEAGE logo">
-        <div class="text">
-            <p class="mail">contact@tanguydeleage.com</p>
-            <div class="copyright">
-                <p>Design and Developped by Tanguy DELEAGE.</p>
-                <p>2023. All rights reserved</p>
+            <div class="text">
+                <p class="mail">contact@tanguydeleage.com</p>
+                <div class="copyright">
+                    <p>Design and Developped by Tanguy DELEAGE.</p>
+                    <p>2023. All rights reserved</p>
+                </div>
             </div>
         </div>
     </div>
@@ -42,8 +49,34 @@
                         image: "public/icon-github.svg",
                     }
 
+                ],
+                paths: [
+                    {
+                        name: "left",
+                        path: "M0 14.766H24V63.7753H16C10.6061 58.6913 7.63636 56.1493 0 47.6184V14.766Z",
+                        class:'move-left'
+                    },
+                    {
+                        name: "top",
+                        path: "M-2.71508e-05 5.41091C-2.71508e-05 2.54666 -6.10352e-05 0.224735 -6.10352e-05 0.224735H50.6666C53.6122 0.224735 56 0.224731 56 0.224731V7.22607H-2.71508e-05V5.41091Z",
+                        class:'move-top',
+                    },
+                    {
+                        name: "right",
+                        path: "M40 20.9595H38.1333V57.5818H40C43.6969 54.4546 45.3939 53.1836 49.8667 47.6184V30.9229C46.2424 26.0687 43.6969 23.9503 40 20.9595ZM32 14.766V63.7753H40C45.8181 58.6913 48.7878 56.1493 56 47.6184V30.9229C49.6363 23.103 45.3939 18.4426 40 14.766H32Z",
+                        class:'move-right',
+                        fillRule: "evenodd",
+                    }
                 ]
             }
+        },
+        methods: {
+            goUp() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+        }
         }
     }
 </script>
@@ -108,16 +141,31 @@
         font-family: 'Quattrocento Sans';
     }
 
+    .divider {
+        height: 1px;
+        background-color: var(--primary);
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+    }
+
 /* ------------- Mobile -------------- */
 @media screen and (max-width: 639px) {
     
     .footer {
-        margin: 4rem 1rem 3rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         align-self: stretch;
         gap: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 1rem 3rem 1rem;
     }
 
     .socials {
@@ -139,18 +187,27 @@
         width: 100%;
         text-align: center;
     }
+
+    .moving-icon {
+        overflow: initial;
+    }
 }
 
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
     
     .footer {
-        margin: 5rem 2rem 4rem 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         align-self: stretch;
         gap: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 2rem 4rem 2rem;
     }
 
     .socials {
@@ -170,16 +227,25 @@
         width: 100%;
         text-align: center;
     }
+
+    .moving-icon {
+        overflow: initial;
+    }
 }
 
 /* ------------- Desktop -------------- */
 @media screen and (min-width: 980px) {
     .footer {
-        margin: 8rem 4rem 2rem 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 8rem 4rem 2rem 4rem;
     }
 
     .socials {
@@ -200,6 +266,64 @@
 
     .copyright p {
         font-size: 1.5rem;
+    }
+
+   .moving-icon {
+        overflow: initial;
+        cursor: pointer;
+    }
+
+    .move-left {
+        animation: moveArrowLeft 2s ease-in-out infinite alternate;
+    }
+
+    .move-right {
+        animation: moveArrowRight 2s ease-in-out infinite alternate;
+    }
+
+    .move-top {
+        animation: moveArrowTop 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveArrowLeft {
+        0% {
+            transform: translateY(0) translateX(0) rotate(0);
+        }
+
+        70% {
+            transform: translateY(-0.7rem) translateX(2.3rem) rotate(45deg);
+        }
+        100% {
+            transform: translateY(-0.7rem) translateX(2.3rem) rotate(45deg);
+        }
+    }
+
+    @keyframes moveArrowRight {
+        0% {
+            transform: translateY(0) translateX(0) rotate(0);
+        }
+
+        70% {
+            transform: translateY(1.9rem) translateX(-1.3rem) rotate(-45deg);
+        }
+
+        100% {
+            transform: translateY(1.9rem) translateX(-1.3rem) rotate(-45deg);
+        }
+    }
+
+    @keyframes moveArrowTop {
+        0% {
+            transform: translateY(0) translateX(0) rotate(0);
+        }
+
+        70% {
+            transform: rotate(90deg) translateY(-2rem) translateX(1.5rem);
+        }
+
+        100% {
+            transform: rotate(90deg) translateY(-2rem) translateX(1.5rem);
+        }
     }
 }
 </style>

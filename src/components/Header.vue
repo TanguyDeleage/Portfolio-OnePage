@@ -89,7 +89,7 @@
 </script>
 
 
-<style>
+<style scoped>
 
 
    
@@ -189,11 +189,12 @@
         transform: translateX(100%);
         transition: all 0.7s ease-in;
         gap: 7rem;
+        justify-content: center;
     }
 
     .nav-active {
         transform: translateX(0%) !important;
-        transition: all 0.3s ease-in;
+        transition: all 0.5s ease-in;
     }
 
     .no-scroll {
@@ -293,12 +294,13 @@
         padding: 10rem 2rem;
         transform: translateX(100%);
         transition: all 0.7s ease-in;
-        gap: 7rem;
+        gap: 10rem;
+        justify-content: center;
     }
 
     .nav-active {
         transform: translateX(0%) !important;
-        transition: all 0.3s ease-in;
+        transition: all 0.5s ease-in;
     }
 
     .no-scroll {
