@@ -1,5 +1,5 @@
 <template>
-    <section class="work-container">
+    <section id="work" class="work-container">
         <h2 class="section-title">/ WORK</h2>
         <div class="section-content" >
             <div class="project" v-for="project in projects" :key="project">

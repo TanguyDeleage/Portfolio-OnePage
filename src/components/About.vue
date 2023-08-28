@@ -1,5 +1,5 @@
 <template>
-    <section class="about-container">
+    <section id="about" class="about-container">
         <h2 class="section-title">/ ABOUT</h2>
         <div class="presentation">
             <div class="text slide-in">
@@ -371,7 +371,7 @@
     .text {
         gap: 4rem;
         width: 52.25rem;
-        transition: 0.5s;
+        transition: 0.7s;
     }
 
     .header {

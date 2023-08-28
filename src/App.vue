@@ -39,6 +39,15 @@ body {
   background-color: white;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+html {
+scroll-behavior: smooth;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -49,6 +58,15 @@ header {
 .section-title{
   font-family: 'Bagnard';
   width: 100%;
+  z-index: 3;
+}
+
+#hero{
+  scroll-margin-top: 6rem;
+}
+
+#work, #about, #contact {
+  scroll-margin-top: 3rem
 }
 
 

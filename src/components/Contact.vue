@@ -1,13 +1,13 @@
 <template>
-    <section class="contact-container">
+    <section id="contact" class="contact-container">
         <h2 class="section-title">/ CONTACT</h2>
         <div class="main">
             <h3 class="title">Magic Starts Here</h3>
             <div class="content">
                 <h4 class="subtitle">Have A Project In Mind ?</h4>
-                <div class="btn btn-primary">
+                <a href="mailto:contact@tanguydeleage.com" class="btn btn-primary">
                     <p>contact@tanguydeleage.com</p>
-                </div>
+                </a>
             </div>
             <!-- <div class="divider"></div> -->
         </div>

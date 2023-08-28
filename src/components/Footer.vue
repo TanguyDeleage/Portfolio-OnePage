@@ -10,11 +10,11 @@
                     </a>
                 </div>
             </div>
-            <div class="brand"  @click="goUp()">
-                <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="46" viewBox="0 0 40 46" fill="none">
+            <a href="#hero" class="brand">
+                <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" fill="none">
                     <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
                 </svg>
-        </div>
+            </a>
             <div class="text">
                 <p class="mail">contact@tanguydeleage.com</p>
                 <div class="copyright">
@@ -70,14 +70,6 @@
                 ]
             }
         },
-        methods: {
-            goUp() {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-          })
-        }
-        }
     }
 </script>
 
@@ -149,6 +141,11 @@
 
     .footer-container {
         display: flex;
+    }
+
+    .moving-icon {
+        width: 57px;
+        height: 65px;
     }
 
 /* ------------- Mobile -------------- */

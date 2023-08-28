@@ -1,5 +1,5 @@
 <template>
-    <section class="hero-container">
+    <section id="hero" class="hero-container">
         <div class="left-container">
             <div class="hero-title slideRight">
                 <h1>TANGUY DELEAGE</h1>
@@ -8,12 +8,12 @@
             <p class="hero-description slideRight">Bridging Design and Development by designing high-fidelity, interactive 
                 prototypes to improve Design team's research process.</p>
             <div class="hero-cta slideRight">
-                <div class="btn btn-primary">
+                <a href="#work" class="btn btn-primary">
                     <p>View Portfolio</p>
-                </div>
-                <div class="btn btn-secondary">
+                </a>
+                <a href="#contact" class="btn btn-secondary">
                     <p>Contact</p>
-                </div>
+                </a>
             </div>
         </div>
         <div class="right-container">

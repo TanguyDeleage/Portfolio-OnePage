@@ -1,24 +1,23 @@
 <template>
     <div class="header">
-       <div @mouseenter="iconHover(true)" @mouseleave=iconHover(false) class="brand">
+       <a href="/" @mouseenter="iconHover(true)" @mouseleave=iconHover(false) class="brand">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="46" viewBox="0 0 40 46" fill="none">
                 <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" class="icon-animation" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
             </svg>
-       </div>
+       </a>
        <nav  @click="openMenu()" class="nav-links">
-            <div class="nav-link">
+            <a href="#hero" class="nav-link">
                 <p class="nav-title slide-left">Home</p>
-            </div>
-            <div class="nav-link">
+            </a>
+            <a href="#work" class="nav-link">
                 <p class="nav-title slide-left">Work</p>
-            </div>
-            <div class="nav-link">
+            </a>
+            <a href="#about" class="nav-link">
                 <p class="nav-title slide-left">About</p>
-                <div></div>
-            </div>
-            <div class="nav-link">
+            </a>
+            <a href="#contact" class="nav-link">
                 <p class="nav-title slide-left">Contact</p>
-            </div>
+            </a>
        </nav>
        <div @click="openMenu()" class="burger">
             <div class="line">
