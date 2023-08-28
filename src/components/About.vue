@@ -61,16 +61,11 @@
             getImageSrc() {
                 const windowWidth = window.innerWidth;
 
-                console.log('Window Width:', windowWidth);
-
                 if (windowWidth < 639) {
-                    console.log('Using Small Image');
                     return this.imagePaths.small;
                 } else if (windowWidth < 980) {
-                    console.log('Using Medium Image');
                     return this.imagePaths.medium;
                 } else {
-                    console.log('Using Large Image');
                     return this.imagePaths.large;
                 }
             }

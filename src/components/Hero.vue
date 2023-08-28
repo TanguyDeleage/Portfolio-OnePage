@@ -1,13 +1,13 @@
 <template>
     <section class="hero-container">
         <div class="left-container">
-            <div class="hero-title">
+            <div class="hero-title slideRight">
                 <h1>TANGUY DELEAGE</h1>
                 <h2>Product designer Fullstack</h2>
             </div>
-            <p class="hero-description">Bridging Design and Development by designing high-fidelity, interactive 
+            <p class="hero-description slideRight">Bridging Design and Development by designing high-fidelity, interactive 
                 prototypes to improve Design team's research process.</p>
-            <div class="hero-cta">
+            <div class="hero-cta slideRight">
                 <div class="btn btn-primary">
                     <p>View Portfolio</p>
                 </div>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="right-container">
-            <div class="hero-picture"></div>
+            <div class="hero-picture slideLeft"></div>
         </div>
     </section>
 </template>
@@ -26,6 +26,42 @@
 <script>
     export default {
         name: 'Hero',
+        mounted() {
+            this.slideInHero();
+        },
+        methods: {
+            slideInHero() {
+                const slideElements = [
+                    { method: this.title, delay: 1 },
+                    { method: this.description, delay: 100 },
+                    { method: this.cta, delay: 350 },
+                    { method: this.picture, delay: 450 },
+                ];
+
+                slideElements.forEach(({ method, delay }) => {
+                    setTimeout(() => {
+                    method();
+                    }, delay);
+                });
+            },
+
+            title() {
+                const title = document.querySelector('.hero-title');
+                title.classList.remove('slideRight')
+            },
+            description() {
+                const description = document.querySelector('.hero-description');
+                description.classList.remove('slideRight')
+            },
+            cta() {
+                const cta = document.querySelector('.hero-cta');
+                cta.classList.remove('slideRight')
+            },
+            picture() {
+                const cta = document.querySelector('.hero-picture');
+                cta.classList.remove('slideLeft')
+            },
+        }
     }
 </script>
 
@@ -151,6 +187,7 @@ h2{
     .left-container{
         gap: 4rem;
         width: calc(100% - 35.375rem);
+        transition: 0.5s ease-out;
     }
 
     .right-container {
@@ -162,5 +199,21 @@ h2{
         height: 35.1875rem;
         width: 100%;
     }
+
+    /* ========== Animation ========== */
+    .slideRight {
+        transform: translateX(-2.5rem);
+        opacity: 0%;
+    }
+
+    .slideLeft {
+        transform: translateX(2.5rem);
+        opacity: 0%;
+    }
+
+    .hero-title, .hero-description, .hero-cta, .hero-picture {
+        transition: opacity 450ms ease-out, transform 450ms ease-out;
+    }
+
 }
 </style>
