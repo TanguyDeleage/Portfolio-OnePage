@@ -38,7 +38,7 @@
                         description: "Provide the download and web consumption of offline content for the users of the web platform",
                         image: "public/project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
-                        url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon",
+                        url: "",
                         device: "desktop left"
 
                     },
