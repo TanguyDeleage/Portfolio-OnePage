@@ -36,7 +36,7 @@
                     {
                         title: "Canal+",
                         description: "Coming soon",
-                        image: "public/project-canal.png",
+                        image: "project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
                         url: "",
                         device: "desktop left"
@@ -45,7 +45,7 @@
                     {
                         title: "Matematch",
                         description: "10 days to help foreign students live a deeper exchange experience",
-                        image: "public/project-matematch.png",
+                        image: "project-matematch.png",
                         alt: "Home page mockup of the Matematch app",
                         url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon",
                         device: "mobile"
@@ -54,7 +54,7 @@
                     {
                         title: "LegID",
                         description: "48h to help families live an easier mourning",
-                        image: "public/project-legid.png",
+                        image: "project-legid.png",
                         alt: "Mockup of the LegID landing page",
                         url: "https://www.behance.net/gallery/176612077/LegID-Start-up-weekend-project",
                         device: "desktop left"

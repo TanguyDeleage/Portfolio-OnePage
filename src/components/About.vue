@@ -51,9 +51,9 @@
         data() {
             return {
                 imagePaths: {
-                    small: 'public/about-path-sm.jpg',
-                    medium: 'public/about-path-md.jpg',
-                    large: 'public/about-path-lg.jpg',
+                    small: 'about-path-sm.jpg',
+                    medium: 'about-path-md.jpg',
+                    large: 'about-path-lg.jpg',
                 }
             };
         },
