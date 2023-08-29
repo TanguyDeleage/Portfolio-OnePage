@@ -36,17 +36,17 @@
                     {
                         title: "Linkedin",
                         url: "https://www.linkedin.com/in/tanguy-deleage/",
-                        image: "public/icon-linkedin.svg",
+                        image: "icon-linkedin.svg",
                     },
                     {
                         title: "Behance",
                         url: "https://www.behance.net/tanguy-delage",
-                        image: "public/icon-behance.svg",
+                        image: "icon-behance.svg",
                     },
                     {
                         title: "Github",
                         url: "https://github.com/TanguyDeleage",
-                        image: "public/icon-github.svg",
+                        image: "icon-github.svg",
                     }
 
                 ],
