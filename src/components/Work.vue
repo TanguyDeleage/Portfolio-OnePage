@@ -35,7 +35,7 @@
                 projects: [
                     {
                         title: "Canal+",
-                        description: "Provide the download and web consumption of offline content for the users of the web platform",
+                        description: "Coming soon",
                         image: "public/project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
                         url: "",
@@ -142,6 +142,7 @@
         height: 100%;
         position: absolute;
         bottom: 0;
+        left: 0;
         display: flex;
         justify-content: space-around;
         background:

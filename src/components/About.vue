@@ -24,7 +24,7 @@
                 <h3 class="title">I'm An Eternal Curious</h3>
                 <h4 class="subtitle">With A Lot Of Hobbies</h4>
             </div>
-            <img src="" alt="">
+            <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music...">
         </div>
         <div class="testimonials">
             <h3 class="title">Latest Reference</h3>
@@ -376,6 +376,15 @@
 
     .header {
         gap: 1rem;
+        width: 44.75rem;
+        margin: 0 auto;
+    }
+
+    .hobbies {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .title {
