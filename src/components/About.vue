@@ -24,7 +24,7 @@
                 <h3 class="title">I'm An Eternal Curious</h3>
                 <h4 class="subtitle">With A Lot Of Hobbies</h4>
             </div>
-            <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music...">
+            <!-- <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music..."> -->
         </div>
         <div class="testimonials">
             <h3 class="title">Latest Reference</h3>
