@@ -27,11 +27,11 @@
             <!-- <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music..."> -->
         </div>
         <div class="testimonials">
-            <h3 class="title">Latest Reference</h3>
+            <h4 class="subtitle">Latest Reference</h4>
             <div class="lower-part">
                 <div class="outro-paragraph">
                     <div class="beginning">"</div>
-                    <div class="reference">Il s'est approprié par lui-même des connaissances poussées sur les variables Figma nouvellement disponibles et a brillamment animé son tout premier workshop d’équipe, en appliquant ces variables sur des prototypes projetant tout le potentiel de cette nouvelle feature sur notre produit myCANAL, un vrai game changer pour mon équipe.</div>
+                    <div class="reference">All his personal and professional initiatives make Tanguy a hybrid and versatile profile. During his work-study period at Canal+, he naturally acquired the fundamentals of product design. But Tanguy didn't stop there: on his own initiative, he acquired in-depth knowledge of the newly available Figma variables and brilliantly led his very first team workshop, applying these variables to prototypes projecting the full potential of this new feature on our product.</div>
                     <div class="ending">"</div>
                 </div>
                 <div class="author">
@@ -51,9 +51,9 @@
         data() {
             return {
                 imagePaths: {
-                    small: 'about-path-sm.jpg',
-                    medium: 'about-path-md.jpg',
-                    large: 'about-path-lg.jpg',
+                    small: 'about-path-sm.svg',
+                    medium: 'about-path-md.svg',
+                    large: 'about-path-lg.svg',
                 }
             };
         },
@@ -183,11 +183,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 0.3rem;
     }
 
     .name {
         color: var(--text);
-        font-family: 'Bagnard';
+        font-family: 'Quattrocento Sans';
+        font-weight: bold;
     }
 
     .job-title {
@@ -247,7 +249,7 @@
     }
 
     .lower-part{
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .outro-paragraph {
@@ -258,16 +260,12 @@
         font-size: 4rem;
     }
 
-    .author {
-        gap: 0.5rem;
-    }
-
     .name {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .job-title{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .reference {
@@ -279,7 +277,7 @@
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
     .about-container {
-        padding: 2rem 0rem;
+        padding: 2rem 3rem;
         gap: 4rem;
     }
 
@@ -337,10 +335,6 @@
         font-size: 5rem;
     }
 
-    .author {
-        gap: 0.5rem;
-    }
-
     .name {
         font-size: 1.5rem;
     }
@@ -376,19 +370,20 @@
 
     .header {
         gap: 1rem;
-        width: 44.75rem;
-        margin: 0 auto;
+        width: 100%;
+        /* margin: 0 auto; */
     }
 
     .hobbies {
-        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        width: 52.25rem;
     }
 
     .title {
         font-size: 4rem;
+        /* width: 100%; */
     }
 
     .subtitle {
@@ -427,11 +422,7 @@
     }
 
     .beginning, .ending {
-        font-size: 8rem;
-    }
-
-    .author {
-        gap: 0.5rem;
+        font-size: 6rem;
     }
 
     .name {

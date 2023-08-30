@@ -80,7 +80,6 @@ header {
 /* ------------- Tablet -------------- */
 @media screen and (min-width: 640px) and (max-width: 979px) {
   .section-title{
-      padding-left: 2rem;
       font-size: 2rem;
   }
 }

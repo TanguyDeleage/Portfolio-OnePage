@@ -3,7 +3,7 @@
         <div class="left-container">
             <div class="hero-title slideRight">
                 <h1>TANGUY DELEAGE</h1>
-                <h2>Product designer Fullstack</h2>
+                <h2>Product Designer Fullstack</h2>
             </div>
             <p class="hero-description slideRight">Bridging Design and Development by designing high-fidelity, interactive 
                 prototypes to improve Design team's research process.</p>
@@ -88,15 +88,11 @@
     gap: 0.5rem;
 }
 
-h1{
-    font-size: 1.5rem;
+h1, h2 {
     font-family: 'Bagnard';
 }
 
-h2{
-    font-size: 3.5rem;
-    font-family: 'Bagnard';
-}
+
 .hero-description{
     font-size: 1.5rem;
 }
@@ -119,10 +115,22 @@ h2{
 /* ------------- Mobile -------------- */
 @media screen and (max-width: 639px) {
     .hero-container {
-        padding: 5rem 1rem 4rem 1rem;
+        padding: 2rem 1rem 4rem 1rem;
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 
     .left-container{
@@ -162,11 +170,11 @@ h2{
         width: 100%;
     }
 
-    .hero-title h1 {
+    h1 {
         font-size: 1rem;
     }
 
-    .hero-title h2 {
+    h2 {
         font-size: 2rem;
     }
 
@@ -182,6 +190,18 @@ h2{
         flex-direction: row;
         align-items: center;
         gap: 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        max-width: 50rem;
     }
 
     .left-container{

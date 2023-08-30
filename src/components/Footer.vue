@@ -147,127 +147,8 @@
         height: 65px;
     }
 
-/* ------------- Mobile -------------- */
-@media screen and (max-width: 639px) {
-    
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: stretch;
-        gap: 1.5rem;
-    }
 
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 4rem 1rem 3rem 1rem;
-    }
-
-    .socials {
-        gap: 0.5rem;
-    }
-    .title{
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-    .mail {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .copyright p {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .moving-icon {
-        overflow: initial;
-    }
-}
-
-/* ------------- Tablet -------------- */
-@media screen and (min-width: 640px) and (max-width: 979px) {
-    
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: stretch;
-        gap: 2rem;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 5rem 2rem 4rem 2rem;
-    }
-
-    .socials {
-        gap: 0.5rem;
-    }
-    .title{
-        font-size: 2rem;
-    }
-    .mail {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .copyright p {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .moving-icon {
-        overflow: initial;
-    }
-}
-
-/* ------------- Desktop -------------- */
-@media screen and (min-width: 980px) {
-    .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-self: stretch;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 8rem 4rem 2rem 4rem;
-    }
-
-    .socials {
-        gap: 0.5rem;
-        min-width: 30.1875rem;
-    }
-    .title{
-        font-size: 2rem;
-    }
-
-    .social-links {
-        padding-right: 1rem;
-    }
-
-    .text {
-        padding-left: 1rem;
-    }
-
-    .mail {
-        font-size: 1.5rem;
-    }
-
-    .copyright p {
-        font-size: 1.5rem;
-    }
-
+    /* ======= Animation logo to arrow ============= */
    .moving-icon {
         overflow: initial;
         cursor: pointer;
@@ -324,6 +205,133 @@
         100% {
             transform: rotate(90deg) translateY(-2rem) translateX(1.5rem);
         }
+    }
+
+/* ------------- Mobile -------------- */
+@media screen and (max-width: 639px) {
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        gap: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 1rem 1rem 1rem;
+    }
+
+    .socials {
+        gap: 0.5rem;
+    }
+    .title{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .mail {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .moving-icon {
+        overflow: initial;
+    }
+}
+
+/* ------------- Tablet -------------- */
+@media screen and (min-width: 640px) and (max-width: 979px) {
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        gap: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 2rem 2rem 2rem;
+    }
+
+    .socials {
+        gap: 0.5rem;
+    }
+    .title{
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .mail {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .moving-icon {
+        overflow: initial;
+    }
+}
+
+/* ------------- Desktop -------------- */
+@media screen and (min-width: 980px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 8rem 4rem 2rem 4rem;
+    }
+
+    .socials {
+        gap: 0.5rem;
+        min-width: 30.1875rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+
+    .social-links {
+        padding-right: 1rem;
+    }
+
+    .text {
+        padding-left: 1rem;
+    }
+
+    .mail {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: right;
+    }
+
+    .copyright p {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: right;
     }
 }
 </style>

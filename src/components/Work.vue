@@ -260,7 +260,8 @@
 @media screen and (min-width: 980px) {
     .work-container {
         padding: 4rem 0rem;
-        gap: 8rem;
+        /* gap: 8rem; */
+        gap: 4rem;
     }
 
     .project:nth-child(even){
