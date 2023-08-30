@@ -19,13 +19,13 @@
                 <img :src="getImageSrc" alt="My professional path">
             </div>
         </div>
-        <div class="hobbies">
+        <!-- <div class="hobbies">
             <div class="header">
                 <h3 class="title">I'm An Eternal Curious</h3>
                 <h4 class="subtitle">With A Lot Of Hobbies</h4>
             </div>
-            <!-- <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music..."> -->
-        </div>
+            <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music...">
+        </div> -->
         <div class="testimonials">
             <h4 class="subtitle">Latest Reference</h4>
             <div class="lower-part">
