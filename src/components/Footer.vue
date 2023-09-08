@@ -2,6 +2,10 @@
     <div class="footer-container">
         <div class="divider"></div>
         <div class="footer">
+            <div class="copyright">
+                <p>Design and Developped by Tanguy DELEAGE.</p>
+                <p>2023. All rights reserved</p>
+            </div>
             <div class="socials">
                 <h4 class="title">Follow Me</h4>
                 <div class="social-links">
@@ -15,13 +19,6 @@
                     <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
                 </svg>
             </a>
-            <div class="text">
-                <p class="mail">contact@tanguydeleage.com</p>
-                <div class="copyright">
-                    <p>Design and Developped by Tanguy DELEAGE.</p>
-                    <p>2023. All rights reserved</p>
-                </div>
-            </div>
         </div>
     </div>
 </template>
@@ -106,25 +103,12 @@
         text-decoration: none;
     }
 
-    .text {
-        display: flex;
-        max-width: 30.1875rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .mail {
-        color: var(--text);
-        font-family: 'Quattrocento Sans';
-        font-style: italic;
-    }
-
     .copyright {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         align-self: stretch;
+        justify-content: end;
     }
 
     .copyright p {
@@ -134,7 +118,7 @@
 
     .divider {
         height: 1px;
-        background-color: var(--primary);
+        background-color: rgba(0, 0, 0, 0.20);
         width: 100%;
     }
 
@@ -226,16 +210,20 @@
 
     .socials {
         gap: 0.5rem;
+        order: 0;
     }
     .title{
         font-size: 1rem;
         width: 100%;
         text-align: center;
     }
-    .mail {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
+
+    .copyright {
+        order: 1;
+    }
+
+    .brand {
+        order: 2;
     }
 
     .copyright p {
@@ -268,16 +256,20 @@
 
     .socials {
         gap: 0.5rem;
+        order: 0;
     }
     .title{
         font-size: 2rem;
         width: 100%;
         text-align: center;
     }
-    .mail {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
+
+    .copyright {
+        order: 1;
+    }
+
+    .brand {
+        order: 2;
     }
 
     .copyright p {
@@ -308,29 +300,25 @@
 
     .socials {
         gap: 0.5rem;
-        min-width: 30.1875rem;
+        display: flex;
+        align-items: center;
     }
     .title{
         font-size: 2rem;
     }
 
-    .social-links {
-        padding-right: 1rem;
+    .copyright {
+        min-width: 19.5rem;
     }
-
-    .text {
-        padding-left: 1rem;
-    }
-
-    .mail {
-        font-size: 1.5rem;
-        width: 100%;
-        text-align: right;
-    }
-
     .copyright p {
-        font-size: 1.5rem;
+        font-size: 1rem;
         width: 100%;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.60);
+    }
+
+    .brand {
+        min-width: 19.5rem;
         text-align: right;
     }
 }
