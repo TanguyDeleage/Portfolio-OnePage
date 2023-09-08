@@ -16,7 +16,7 @@
             </div>
             <a href="#hero" class="brand">
                 <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" fill="none">
-                    <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
+                    <path v-for="path in paths" :key="path" :id="path.name" :class="path.class" :d="path.path" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
                 </svg>
             </a>
         </div>
@@ -51,22 +51,58 @@
                     {
                         name: "left",
                         path: "M0 14.766H24V63.7753H16C10.6061 58.6913 7.63636 56.1493 0 47.6184V14.766Z",
-                        class:'move-left'
+                        class:'move-left-start'
                     },
                     {
                         name: "top",
                         path: "M-2.71508e-05 5.41091C-2.71508e-05 2.54666 -6.10352e-05 0.224735 -6.10352e-05 0.224735H50.6666C53.6122 0.224735 56 0.224731 56 0.224731V7.22607H-2.71508e-05V5.41091Z",
-                        class:'move-top',
+                        class:'move-top-start',
                     },
                     {
                         name: "right",
                         path: "M40 20.9595H38.1333V57.5818H40C43.6969 54.4546 45.3939 53.1836 49.8667 47.6184V30.9229C46.2424 26.0687 43.6969 23.9503 40 20.9595ZM32 14.766V63.7753H40C45.8181 58.6913 48.7878 56.1493 56 47.6184V30.9229C49.6363 23.103 45.3939 18.4426 40 14.766H32Z",
-                        class:'move-right',
+                        class:'move-right-start',
                         fillRule: "evenodd",
                     }
-                ]
+                ],
+                heightThreshold: {
+                    mobile: 650,
+                    tablet: 715,
+                    desktop: 900,
+                },
             }
         },
+
+        mounted() {
+            window.addEventListener('scroll', this.logoArrow);
+        },
+        
+        methods: {
+            logoArrow() {
+                const brand = document.querySelector('.footer')
+                const rect = brand.getBoundingClientRect();
+                const distanceToTop = rect.top;
+
+                const leftPart = document.querySelector('.move-left-start')
+                const rightPart = document.querySelector('.move-right-start')
+                const topPart = document.querySelector('.move-top-start')
+
+                let threshold;
+                if (window.innerWidth < 640) {
+                    threshold = this.heightThreshold.mobile;
+                } else if (window.innerWidth < 980) {
+                    threshold = this.heightThreshold.tablet;
+                } else {
+                    threshold = this.heightThreshold.desktop;
+                }
+
+                if (distanceToTop < threshold) {
+                    leftPart.classList.add('move-left');
+                    rightPart.classList.add('move-right');
+                    topPart.classList.add('move-top');
+                }
+            }
+        }
     }
 </script>
 
@@ -139,15 +175,15 @@
     }
 
     .move-left {
-        animation: moveArrowLeft 2s ease-in-out infinite alternate;
+        animation: moveArrowLeft 1.3s ease-out forwards;
     }
 
     .move-right {
-        animation: moveArrowRight 2s ease-in-out infinite alternate;
+        animation: moveArrowRight 1.3s ease-out forwards;
     }
 
     .move-top {
-        animation: moveArrowTop 2s ease-in-out infinite alternate;
+        animation: moveArrowTop 1.3s ease-out forwards;
     }
 
     @keyframes moveArrowLeft {
@@ -155,9 +191,6 @@
             transform: translateY(0) translateX(0) rotate(0);
         }
 
-        70% {
-            transform: translateY(-0.7rem) translateX(2.3rem) rotate(45deg);
-        }
         100% {
             transform: translateY(-0.7rem) translateX(2.3rem) rotate(45deg);
         }
@@ -168,10 +201,6 @@
             transform: translateY(0) translateX(0) rotate(0);
         }
 
-        70% {
-            transform: translateY(1.9rem) translateX(-1.3rem) rotate(-45deg);
-        }
-
         100% {
             transform: translateY(1.9rem) translateX(-1.3rem) rotate(-45deg);
         }
@@ -180,10 +209,6 @@
     @keyframes moveArrowTop {
         0% {
             transform: translateY(0) translateX(0) rotate(0);
-        }
-
-        70% {
-            transform: rotate(90deg) translateY(-2rem) translateX(1.5rem);
         }
 
         100% {
