@@ -35,7 +35,7 @@
                 projects: [
                     {
                         title: "Canal+",
-                        description: "Coming soon",
+                        description: "Allowing Mac users to download offline content",
                         image: "project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
                         url: "https://www.behance.net/gallery/179911807/Download-Offline-Content-MyCANAL",

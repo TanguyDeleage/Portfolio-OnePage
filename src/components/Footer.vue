@@ -175,15 +175,15 @@
     }
 
     .move-left {
-        animation: moveArrowLeft 1.3s ease-out forwards;
+        animation: 1.3s moveArrowLeft 2.5s ease-out forwards;
     }
 
     .move-right {
-        animation: moveArrowRight 1.3s ease-out forwards;
+        animation: 1.3s moveArrowRight 2.5s ease-out forwards;
     }
 
     .move-top {
-        animation: moveArrowTop 1.3s ease-out forwards;
+        animation: 1.3s moveArrowTop 2.5s ease-out forwards;
     }
 
     @keyframes moveArrowLeft {
