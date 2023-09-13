@@ -38,7 +38,7 @@
                         description: "Coming soon",
                         image: "project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
-                        url: "",
+                        url: "https://www.behance.net/gallery/179911807/Download-Offline-Content-MyCANAL",
                         device: "desktop left"
 
                     },
