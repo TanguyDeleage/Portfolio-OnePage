@@ -105,7 +105,7 @@ h1, h2 {
 }
 
 .hero-picture {
-    background: url("../assets/images/hero-picture.jpeg");
+    background: url("../assets/images/hero-picture.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

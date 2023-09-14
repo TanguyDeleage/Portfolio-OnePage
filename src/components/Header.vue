@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-       <a href="#hero" @mouseenter="iconHover(true)" @mouseleave=iconHover(false) class="brand">
+       <a href="/" @mouseenter="iconHover(true)" @mouseleave=iconHover(false) class="brand">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="40" height="46" viewBox="0 0 40 46" fill="none">
                 <path v-for="path in paths" :key="path" :id="path.name" :d="path.path" class="icon-animation" :class="path.class" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
             </svg>
