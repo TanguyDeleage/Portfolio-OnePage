@@ -14,7 +14,7 @@
                     </a>
                 </div>
             </div>
-            <a href="#hero" class="brand">
+            <a href="#hero" class="brand-footer">
                 <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" fill="none">
                     <path v-for="path in paths" :key="path" :id="path.name" :class="path.class" :d="path.path" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
                 </svg>
@@ -79,8 +79,8 @@
         
         methods: {
             logoArrow() {
-                const brand = document.querySelector('.footer')
-                const rect = brand.getBoundingClientRect();
+                const brandFooter = document.querySelector('.footer')
+                const rect = brandFooter.getBoundingClientRect();
                 const distanceToTop = rect.top;
 
                 const leftPart = document.querySelector('.move-left-start')
@@ -247,7 +247,7 @@
         order: 1;
     }
 
-    .brand {
+    .brand-footer {
         order: 2;
     }
 
@@ -293,7 +293,7 @@
         order: 1;
     }
 
-    .brand {
+    .brand-footer {
         order: 2;
     }
 
@@ -342,7 +342,7 @@
         color: rgba(0, 0, 0, 0.60);
     }
 
-    .brand {
+    .brand-footer {
         min-width: 19.5rem;
         text-align: right;
     }
