@@ -33,6 +33,7 @@
 @font-face {
   font-family: 'Bagnard';
   src: url(../src/assets/fonts/Bagnard.otf);
+  font-display: swap;
 }
 
 body {
