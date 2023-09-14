@@ -14,7 +14,7 @@
                     </a>
                 </div>
             </div>
-            <a href="#hero" class="brand-footer">
+            <a href="#hero" class="brand-footer" title="Scroll to top">
                 <svg class="moving-icon" xmlns="http://www.w3.org/2000/svg" fill="none" alt="Scroll to top">
                     <path v-for="path in paths" :key="path" :id="path.name" :class="path.class" :d="path.path" fill="black" :fill-rule="path.fillRule" :clip-rule="path.fillRule"/>
                 </svg>
