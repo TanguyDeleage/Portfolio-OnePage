@@ -126,6 +126,7 @@
 
 .project-image-desktop {
     position: relative;
+    contain-intrinsic-size: 0 100%;
 }
 
 .section-content{
