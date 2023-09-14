@@ -202,7 +202,7 @@
         }
 
         100% {
-            transform: translateY(1.9rem) translateX(-1.3rem) rotate(-45deg);
+            transform: translateY(1.95rem) translateX(-1.3rem) rotate(-45deg);
         }
     }
 
@@ -212,7 +212,7 @@
         }
 
         100% {
-            transform: rotate(90deg) translateY(-2rem) translateX(1.5rem);
+            transform: rotate(90deg) translateY(-2rem) translateX(1rem);
         }
     }
 
