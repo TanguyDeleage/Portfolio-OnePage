@@ -3,10 +3,9 @@
         <div class="left-container">
             <div class="hero-title slideRight">
                 <h1>TANGUY DELEAGE</h1>
-                <h2>Product Designer Fullstack</h2>
+                <h2>Product Designer Freelance</h2>
             </div>
-            <p class="hero-description slideRight">Bridging Design and Development by designing high-fidelity, interactive 
-                prototypes to improve Design team's research process.</p>
+            <p class="hero-description slideRight">I help agencies and start-up save time and money with design-led development. I build Interactive high-fidelity prototypes which allows faster iterations and a better communications with your users.</p>
             <div class="hero-cta slideRight">
                 <a href="#work" class="btn btn-primary">
                     <p>View Portfolio</p>
