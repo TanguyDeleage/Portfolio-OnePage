@@ -37,7 +37,7 @@
                     },
                     {
                         title: "Behance",
-                        url: "https://www.behance.net/tanguy-delage",
+                        url: "https://www.behance.net/tanguy-deleage",
                         image: "icon-behance.svg",
                     },
                     {
