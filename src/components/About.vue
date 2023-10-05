@@ -8,7 +8,7 @@
                     <h4 class="subtitle">A Fullstack Product Designer</h4>
                 </div>
                 <div class="intro-paragraph">
-                    <p>I'm a +1 year experienced Product Designer with a business background and technical skills. I've worked on a +10M user product and developed a web app.</p>
+                    <p>I've worked on a +10M users product and developed a web app. I'm a blend of business knowledge and technical skills.</p>
                     <p>I focus on advance prototyping, to validate hypotheses and engage users. I'm proficient in Figma, along with HTML, CSS, and JavaScript ( Vue.js). Due to my past experiences as Product Owner, Strategy Consultant, Developer, I developed a better understanding of every stakeholders constraints and goals. It allows me to work on the design part while considering every aspect of your product.</p>
                     <p>Beyond tech, I'm an explorer, mainly by train, a musician (piano, bass, ukulele, composing on my computer), and sports enthusiast (bouldering, surfing, skateboarding, running), always eager to discover new adventures.</p>
                 </div>
@@ -18,13 +18,6 @@
                 <img :src="getImageSrc" alt="My professional path">
             </div>
         </div>
-        <!-- <div class="hobbies">
-            <div class="header">
-                <h3 class="title">I'm An Eternal Curious</h3>
-                <h4 class="subtitle">With A Lot Of Hobbies</h4>
-            </div>
-            <img src="public/hobbies.jpg" alt="Different pictures of my hobbies : photography, bouldering, music...">
-        </div> -->
         <div class="testimonials">
             <h4 class="subtitle">Latest Reference</h4>
             <div class="lower-part">
