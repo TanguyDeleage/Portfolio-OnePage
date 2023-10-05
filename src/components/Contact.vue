@@ -2,14 +2,15 @@
     <section id="contact" class="contact-container">
         <h2 class="section-title">/ CONTACT</h2>
         <div class="main">
-            <h3 class="title">Magic Starts Here</h3>
+            <h3 class="title">Get In Touch</h3>
             <div class="content">
-                <h4 class="subtitle">Have A Project In Mind ?</h4>
-                <a href="mailto:contact@tanguydeleage.com" class="btn btn-primary">
-                    <p>contact@tanguydeleage.com</p>
-                </a>
+                <p class="subtitle">Available to work full-remote, or punctually around Nantes, Bordeaux or Paris. You have a project you’d like to discuss ? </p>
+                <p class="subtitle"> Email : <a class="underline hover-bold" href="mailto:contact@tanguydeleage.com">contact@tanguydeleage.com</a> </p>
             </div>
-            <!-- <div class="divider"></div> -->
+            <a href="mailto:contact@tanguydeleage.com" class="btn btn-primary">
+                <p>Send an email</p>
+            </a>
+
         </div>
     </section>
 </template>
@@ -50,7 +51,11 @@
 
     .subtitle {
         color: var(--text);
-        font-family: 'Bagnard';
+        font-family: 'QuattroCento Sans';
+    }
+
+    .underline {
+        text-decoration: underline;
     }
 
 /* ------------- Mobile -------------- */
@@ -94,6 +99,7 @@
 
     .main {
         gap: 2rem;
+        max-width: 40rem;
     }
 
     .title {
@@ -105,7 +111,7 @@
     }
 
     .subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .divider {
@@ -123,8 +129,9 @@
     }
 
     .main {
-        gap: 3rem;
+        gap: 2rem;
         padding-left: 4rem;
+        max-width: 48rem;
     }
 
     .title {
@@ -136,13 +143,11 @@
     }
 
     .subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    .divider {
-        height: 1px;
-        background-color: var(--primary);
-        width: 100%;
+    .hover-bold:hover {
+        font-weight: bold;
     }
 }
 </style>

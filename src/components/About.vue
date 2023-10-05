@@ -4,14 +4,13 @@
         <div class="presentation">
             <div class="text slide-in">
                 <div class="header">
-                    <h3 class="title">Bridging Design And Development</h3>
-                    <h4 class="subtitle">With A Lot Of Passion</h4>
+                    <h3 class="title">I'm Tanguy Deléage</h3>
+                    <h4 class="subtitle">A Fullstack Product Designer</h4>
                 </div>
                 <div class="intro-paragraph">
-                    <p>I've always been curious, wanted to know how things work, and I always had ideas I wanted to exploit.</p>
-                    <p>Business School helped me structure those ideas through strategy but it also made me realize I was lacking operational skills.</p>
-                    <p>I self-learned code until I joined Le Wagon Web Developer's Bootcamp. There I understood strategy and operational are very useful but they must be user oriented.</p>
-                    <p>Fascinated by Front-end development and Products, I became a Product Designer. I now found my place between strategy/operational/user.</p>
+                    <p>I'm a +1 year experienced Product Designer with a business background and technical skills. I've worked on a +10M user product and developed a web app.</p>
+                    <p>I focus on advance prototyping, to validate hypotheses and engage users. I'm proficient in Figma, along with HTML, CSS, and JavaScript ( Vue.js). Due to my past experiences as Product Owner, Strategy Consultant, Developer, I developed a better understanding of every stakeholders constraints and goals. It allows me to work on the design part while considering every aspect of your product.</p>
+                    <p>Beyond tech, I'm an explorer, mainly by train, a musician (piano, bass, ukulele, composing on my computer), and sports enthusiast (bouldering, surfing, skateboarding, running), always eager to discover new adventures.</p>
                 </div>
             </div>
             <div class="image">

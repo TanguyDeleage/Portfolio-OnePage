@@ -2,10 +2,10 @@
     <section id="hero" class="hero-container">
         <div class="left-container">
             <div class="hero-title slideRight">
-                <h1>TANGUY DELEAGE</h1>
+                <h1>I’m Tanguy Deléage</h1>
                 <h2>Product Designer Freelance</h2>
             </div>
-            <p class="hero-description slideRight">I help agencies and start-up save time and money with design-led development. I build Interactive high-fidelity prototypes which allows faster iterations and a better communications with your users.</p>
+            <p class="hero-description slideRight">I design interactive, high-fidelity prototypes to help start-up and agencies improve their time-to-value.</p>
             <div class="hero-cta slideRight">
                 <a href="#work" class="btn btn-primary">
                     <p>View Portfolio</p>
@@ -111,6 +111,15 @@ h1, h2 {
     filter: grayscale(1);
 }
 
+.hero-title h1 {
+    font-family: 'Quattrocento Sans';
+    font-weight: bold;
+}
+
+.hero-title h2 {
+    transform: translateY(-0.5rem);
+}
+
 /* ------------- Mobile -------------- */
 @media screen and (max-width: 639px) {
     .hero-container {
@@ -196,7 +205,7 @@ h1, h2 {
     }
 
     h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .hero-description {
