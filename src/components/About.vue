@@ -28,7 +28,7 @@
                 </div>
                 <div class="author">
                     <p class="name">Vanessa.G</p>
-                    <p class="job-title">Head Of Product Design</p>
+                    <p class="job-title">Head Of Product Design - CANAL+</p>
                 </div>
             </div>
             
