@@ -3,8 +3,8 @@
         <h2 class="section-title">/ WORK</h2>
         <div class="section-content" >
             <div class="project" v-for="project in projects" :key="project">
-                <div class="left-container" :class="{'container-desktop': project.device === 'desktop left'}">
-                    <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'desktop left', 'mobile hide-right':project.device === 'mobile' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
+                <div class="left-container" :class="{'container-desktop': project.device === 'device left'}">
+                    <div class="project-image" :class="{ 'desktop-left hide-left': project.device === 'device left', 'mobile hide-right':project.device === 'device right' }" :style="{ 'background': 'url(' + project.image + ') no-repeat center/contain' }"></div>
                 </div>
                 <div class="right-container">
                     <div class="project-title">
@@ -39,7 +39,16 @@
                         image: "project-canal.png",
                         alt: "Mockup of a detail page from myCanal with an opened pop-in",
                         url: "https://www.behance.net/gallery/179911807/Download-Offline-Content-MyCANAL",
-                        device: "desktop left"
+                        device: "device left"
+
+                    },
+                    {
+                        title: "Kuartz",
+                        description: "Transforming energy contracts : from paperwork to digital efficiency",
+                        image: "project-kuartz.png",
+                        alt: "Kuartz mockup showing a laptop floating in the air",
+                        url: "https://www.behance.net/gallery/182420717/Kuartz-Freelance-mission-in-energy-sector",
+                        device: "device right"
 
                     },
                     {
@@ -48,7 +57,7 @@
                         image: "project-matematch.png",
                         alt: "Home page mockup of the Matematch app",
                         url: "https://www.behance.net/gallery/175709177/Matematch-Mobile-App-for-foreign-students-Le-Wagon",
-                        device: "mobile"
+                        device: "device left"
 
                     },
                     {
@@ -57,7 +66,7 @@
                         image: "project-legid.png",
                         alt: "Mockup of the LegID landing page",
                         url: "https://www.behance.net/gallery/176612077/LegID-Start-up-weekend-project",
-                        device: "desktop left"
+                        device: "device right"
 
                     }
                 ]
