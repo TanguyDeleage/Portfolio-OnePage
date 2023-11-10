@@ -329,5 +329,20 @@
         filter: grayscale(0.5);
     }
 
+    @keyframes hide-left-animation {
+        0% {
+            transform: translateX(-20%) scale(0.8);
+            filter: grayscale(0.5);
+        }
+        50% {
+            transform: translateX(0%) scale(1);
+            filter: grayscale(0);
+        }
+        100% {
+            transform: translateX(-20%) scale(0.8);
+            filter: grayscale(0.5);
+        }
+    }
+
 }
 </style>
