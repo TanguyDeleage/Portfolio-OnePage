@@ -7,9 +7,17 @@
                 <p class="subtitle">Available to work full-remote, or punctually around Nantes, Bordeaux or Paris. You have a project you’d like to discuss ? </p>
                 <p class="subtitle"> Email : <a class="underline hover-bold" href="mailto:contact@tanguydeleage.com">contact@tanguydeleage.com</a> </p>
             </div>
-            <a href="mailto:contact@tanguydeleage.com" class="btn btn-primary">
+            <!-- <a href="mailto:contact@tanguydeleage.com" class="btn btn-primary">
                 <p>Send an email</p>
-            </a>
+            </a> -->
+            <div class="contact-cta">
+                <a href="https://calendly.com/tdeleage/hello" target="_blank" class="btn btn-primary">
+                    <p>Book a free 30min call</p>
+                </a>
+                <a href="mailto:contact@tanguydeleage.com" class="btn btn-secondary">
+                    <p>Send an email</p>
+                </a>
+            </div>
 
         </div>
     </section>
@@ -56,6 +64,13 @@
 
     .underline {
         text-decoration: underline;
+    }
+
+    .contact-cta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
 /* ------------- Mobile -------------- */
